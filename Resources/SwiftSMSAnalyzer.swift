@@ -4,8 +4,8 @@ import Foundation
 
 public class SwiftSMSAnalyzer {
     
-    private static let gsm7bitChars = "@£$¥èéùìòÇØøÅåΔ_ΦΓΛΩΠΨΣΘΞÆæßÉ!\"#¤%&'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà "
-    private static let gsm7bitExChar = "\\^{}[~]|€"
+    private static let gsm7bitChars = "@£$¥èéùìòÇØøÅåΔ_ΦΓΛΩΠΨΣΘΞÆæßÉ!\"#¤%&'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà \u{000A}\u{000D}"
+    private static let gsm7bitExChar = "\\^{}[~]|€\u{008E}\u{21A1}"
     
     private static let gsm7bitRegExp = NSPredicate(format:"SELF MATCHES %@", "^[" + SwiftSMSAnalyzer.gsm7bitChars + "]*$")
     private static let gsm7bitExRegExp = NSPredicate(format:"SELF MATCHES %@", "^[" + SwiftSMSAnalyzer.gsm7bitChars + SwiftSMSAnalyzer.gsm7bitExChar + "]*$")

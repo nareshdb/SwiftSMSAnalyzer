@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftSMSAnalyzer'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'A small helper class which analyzes the SMS text.'
   s.description      = <<-DESC
 It analyzes text for details as Encoding - UTF16, GSM 7 bit, Number of messages, Characters per message.
